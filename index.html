@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -92,8 +93,8 @@
               <cite class="reviews__author-name">Анастасия Красильникова <span class="reviews__author-nickname">@misssssiskras</span></cite>
             </blockquote>
           </div>
-          <button class="reviews-control__prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews-control__next" type="button">Следующий отзыв</button>
+          <button class="reviews__control-prev" type="button">Предыдущий отзыв</button>
+          <button class="reviews__control-next" type="button">Следующий отзыв</button>
           <a class="reviews__write button" href="#">Написать</a>
         </div>
       </section>
@@ -101,11 +102,11 @@
         <div class="contacts__wrapper">
           <h2 class="contacts__title">Контакты</h2>
           <table class="contacts__list">
-            <tr class="contacts_email">
+            <tr class="contacts__email">
               <td class="contacts__field">email:</td>
               <td class="contacts__value"><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
             </tr>
-            <tr class="contacts_address">
+            <tr class="contacts__address">
               <td class="contacts__field">адрес:</td>
               <td class="contacts__value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
             </tr>
@@ -120,13 +121,13 @@
         <section class="page-footer__social social">
           <h2 class="visually-hidden">Мы в социальных сетях</h2>
           <ul class="social__list">
-            <li class="social__item">
+            <li class="social__item social-btn">
               <a class="social__link social__link--vkontakte" href="#">Вконтакте</a>
             </li>
-            <li class="social__item">
+            <li class="social__item social-btn">
               <a class="social__link social__link--facebook" href="#">Facebook</a>
             </li>
-            <li class="social__item">
+            <li class="social__item social-btn">
               <a class="social__link social__link--twitter" href="#">Твиттер</a>
             </li>
           </ul>
