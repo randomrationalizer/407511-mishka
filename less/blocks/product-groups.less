@@ -1,0 +1,29 @@
+.product-groups {
+  .centerer();
+
+  box-shadow: 0 0 0 3px red;
+}
+
+.product-groups__list {
+  list-style: none;
+  .reset();
+}
+
+.product-groups__link {
+  display: block;
+  width: 130px;
+
+  padding-top: 28px;
+  padding-right: 160px;
+  padding-bottom: 28px;
+  padding-left: 30px;
+
+  .groups-title();
+  text-align: left;
+  text-decoration: none;
+
+  background-color: @light-green;
+  &--toys {
+    background-color: @dark-green;
+  }
+}
