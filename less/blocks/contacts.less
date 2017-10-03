@@ -1,19 +1,19 @@
 .contacts {
   .centerer();
-
   box-shadow: 0 0 0 3px red;
 }
 
 .contacts__wrapper {
-  padding-top: 27px;
-  padding-bottom: 39px;
+  padding: 27px 0 39px 0;
 }
 
 .contacts__title {
-  .reset();
-  margin-bottom: 27px;
+  margin: 0 0 27px 0;
   padding: 0 30px;
-  .header-small()
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  color: @black;
 }
 
 .contacts__list {
@@ -24,13 +24,11 @@
 
 .contacts__field {
   width: 61px;
-
   vertical-align: top;
 }
 
 .contacts__value {
   width: 183px;
-
   vertical-align: top;
 }
 
@@ -38,10 +36,7 @@
   height: 457px;
   width: 100%;
   margin-bottom: 39px;
-
-  background-image: url("/img/map-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  background: url("/img/map-mobile@1x.jpg") no-repeat 0 0;
 }
 
 .contacts__feedback-control {
