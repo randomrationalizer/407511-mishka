@@ -2,34 +2,44 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Интернет-магазин Мишка</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин Мишка" >
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="main-nav__item site-list__item">
-              <a href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="main-nav__item site-list__item">
-              <a href="form.html">Вязание на заказ</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list functions-list">
-            <li class="main-nav__item functions-list__item">
-              <a class="functions-list__search" href="#">Поиск товаров</a>
-            </li>
-            <li class="main-nav__item functions-list__item">
-              <a class="functions-list__cart" href="#">Корзина</a>
-            </li>
-          </ul>
-        </div>
+      <button class="page-header__toggle" type="button">Открыть меню</button>
+      <nav class="main-nav main-nav--opened">
+        <a class="main-nav__logo">
+          <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин Мишка" />
+        </a>
+        <ul class="main-nav__list site-list">
+          <li class="main-nav__item site-list__item">
+            <a href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item site-list__item">
+            <a href="form.html">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list functions-list">
+          <li class="main-nav__item functions-list__item">
+            <a class="functions-list__search" href="#">Поиск товаров</a>
+          </li>
+          <li class="main-nav__item functions-list__item">
+            <a class="functions-list__cart" href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list sale-list">
+          <li class="main-nav__item sale-list__item">
+            <a href="#">Новые поступления</a>
+          </li>
+          <li class="main-nav__item sale-list__item">
+            <a href="#">Распродажа</a>
+          </li>
+          <li class="main-nav__item sale-list__item sale-list__item--delivery">
+            <p class="sale-list__delivery">Бесплатная доставка по России</p>
+          </li>
+        </ul>
       </nav>
       <section class="page-header__title-block page-header__title-block--main-page">
         <h1 class="page-header__title page-header__title--main-page">Милые штуки ручной<br> работы для дома</h1>
@@ -95,31 +105,38 @@
               <cite class="reviews__author-name">Анастасия Красильникова <span class="reviews__author-nickname">@misssssiskras</span></cite>
             </blockquote>
           </div>
-          <button class="reviews__control reviews__control--prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews__control reviews__control--next" type="button">Следующий отзыв</button>
+          <div class="reviews__controls slider__controls">
+            <button class="reviews__control reviews__control--prev" type="button">Предыдущий отзыв</button>
+            <button class="reviews__control reviews__control--next" type="button">Следующий отзыв</button>
+          </div>
           <a class="reviews__write button" href="#">Написать</a>
         </div>
       </section>
       <section class="contacts">
         <div class="contacts__wrapper">
           <h2 class="contacts__title">Контакты</h2>
-          <table class="contacts__list">
-            <tr class="contacts__email">
-              <td class="contacts__field">email:</td>
-              <td class="contacts__value"><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
-            </tr>
-            <tr class="contacts__address">
-              <td class="contacts__field">адрес:</td>
-              <td class="contacts__value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
-            </tr>
-          </table>
-          <div class="contacts__map interactive-map"></div>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <p class="contacts__field">email:</p>
+              <p class="contacts__value"><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></p>
+            </li>
+            <li class="contacts__item">
+              <p class="contacts__field">адрес:</p>
+              <p class="contacts__value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__map interactive-map"></div>
+        <div class="contacts__wrapper">
           <a class="contacts__feedback-control button" href="#">Напишите нам</a>
         </div>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <img class="page-footer__logo-image" src="img/logo-mobile.svg" width="102" height="34" alt="Интернет-магазин Мишка" />
+        </div>
         <section class="page-footer__social social">
           <h2 class="visually-hidden">Мы в социальных сетях</h2>
           <ul class="social__list">

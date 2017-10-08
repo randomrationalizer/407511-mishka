@@ -1,5 +1,6 @@
 .promo-product {
   .centerer();
+  position: relative;
   box-shadow: 0 0 0 3px blue;
 }
 
@@ -22,10 +23,85 @@
 
 .promo-product__price {
   display: block;
-  margin: 25px 0 25px 0;
+  margin: 25px 0;
   text-align: center;
 }
 
 .promo-product__order {
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .promo-product__wrapper {
+    min-height: 506px;
+    padding: 52px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .promo-product__title {
+    width: 500px;
+    order: 1;
+  }
+
+  .promo-product__subtitle {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 100px;
+    order: 2;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .promo-product__description {
+    width: 290px;
+    order: 3;
+  }
+
+  .promo-product__properties {
+    width: 290px;
+    order: 5;
+  }
+  .promo-product__photo {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    width: 334px;
+    height: 404px;
+    order: 4;
+  }
+
+  .promo-product__price {
+    width: 290px;
+    order: 6;
+  }
+
+  .promo-product__order {
+    box-sizing: border-box;
+    order: 7;
+    width: 290px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo-product__wrapper {
+    min-height: 780px;
+    padding: 135px 0 73px 175px;
+  }
+
+  .promo-product__photo {
+    top: 71px;
+    right: 0;
+    width: 525px;
+    height: 636px;
+  }
+
+  .promo-product__subtitle {
+    top: 140px;
+    left: 40px;
+  }
 }

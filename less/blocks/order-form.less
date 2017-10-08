@@ -18,6 +18,8 @@
 
 .order-form__group {
   .reset();
+  display: flex;
+  flex-direction: column;
   list-style: none;
 }
 
@@ -26,10 +28,27 @@
   line-height: 18px;
   font-weight: bold;
   color: @black;
+
+  &--tel,
+  &--email,
+  &--textarea {
+    line-height: 17px;
+    text-transform: uppercase;
+    color: @light-green;
+  }
 }
 
 .order-form__field {
+  display: flex;
+  flex-direction: row;
   margin-bottom: 14px;
+
+  &--text,
+  &--tel,
+  &--email,
+  &--textarea {
+    flex-direction: column;
+  }
 }
 
 .order-form__button {
@@ -41,4 +60,157 @@
   font-size: 14px;
   line-height: 16px;
   font-weight: normal;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form__fieldset {
+    position: relative;
+    padding: 50px 0 50px 167px;
+    margin-left: auto;
+  }
+
+  .order-form__legend {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    display: block;
+    width: 80px;
+    margin: 0;
+  }
+
+  .order-form__group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 501px;
+
+    &--contacts,
+    &--name {
+      flex-direction: column;
+    }
+
+    &--contacts {
+      padding: 50px 0;
+    }
+  }
+
+  .order-form__field {
+    flex-direction: row;
+    &--checkbox {
+      width: 230px;
+    }
+
+    &--radio {
+      width: 334px;
+    }
+
+    &--tel,
+    &--email,
+    &--textarea {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 668px;
+    }
+
+    &--textarea {
+      padding: 50px 0;
+      margin: 0;
+    }
+  }
+
+  .order-form__label {
+    &--radio,
+    &--checkbox {
+      padding-left: 80px;
+    }
+
+    &--text {
+      margin-right: 25px;
+    }
+  }
+
+  .order-form__input {
+    &--tel,
+    &--email,
+    &--textarea {
+      width: 501px;
+    }
+  }
+
+  .order-form__button {
+    width: 216px;
+  }
+
+  .order-form__container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-form__fieldset {
+    padding-left: 175px;
+  }
+
+  .order-form__field {
+
+    &--checkbox {
+      width: 263px;
+    }
+
+    &--radio {
+      width: 350px;
+    }
+
+    &--tel,
+    &--email,
+    &--textarea {
+      width: 875px;
+    }
+  }
+
+  .order-form__group {
+    width: 700px;
+
+    &--type {
+      width: 350px;
+    }
+
+    &--color {
+      width: 875px;
+    }
+
+    &--contacts {
+      width: 875px;
+    }
+  }
+
+  .order-form__legend {
+    left: 61px;
+  }
+
+  .order-form__label {
+    &--tel,
+    &--email,
+    &--textarea {
+      padding-left: 61px;
+    }
+  }
+
+  .order-form__input {
+    &--tel,
+    &--email,
+    &--textarea {
+      width: 700px;
+    }
+  }
+
+  .order-form__button {
+    width: 186px;
+  }
+
+  .order-form__container {
+    width: 700px;
+    margin: 0 auto;
+  }
 }
