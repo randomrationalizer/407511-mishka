@@ -9,12 +9,15 @@
 
 .advantages__title {
   .reset();
+  flex-direction: column;
   margin-bottom: 28px;
   .heading-big();
 }
 
 .advantages__list {
   .reset();
+  display: flex;
+  flex-direction: column;
   list-style: none;
 }
 
@@ -28,5 +31,50 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__wrapper {
+    padding: 50px 0;
+  }
+
+  .advantages__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    width: 300px;
+
+    &--eco-friendly {
+      order: 1;
+    }
+
+    &--hand-made {
+      order: 2;
+    }
+
+    &--stylish {
+      order: 3;
+    }
+
+    &--patriotic {
+      order: 4;
+    }
+
+    &--likes {
+      order: 5;
+    }
+
+    &--gift-wrap {
+      order: 6;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__wrapper {
+    padding: 70px 175px;
   }
 }

@@ -24,3 +24,22 @@
     background-color: @dark-green;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .product-groups__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .product-groups__link {
+    box-sizing: border-box;
+    width: 334px;
+    min-height: 119px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-groups__link {
+    width: 525px;
+  }
+}

@@ -1,6 +1,17 @@
 .centerer() {
   width: 320px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    width: @tablet-width;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
 
 .reset() {

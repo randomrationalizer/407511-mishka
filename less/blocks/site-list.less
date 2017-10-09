@@ -1,0 +1,24 @@
+.site-list {
+  min-height: 158px;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    flex-direction: row;
+    min-height: 60px;
+    width: 334px;
+    align-self: flex-start;
+    justify-content: space-between;
+    order: 3;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    width: 400px;
+    flex-wrap: wrap;
+    min-height: 89px;
+    order: 1;
+  }
+}
