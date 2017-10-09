@@ -3,15 +3,14 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 668px;
+    box-sizing: border-box;
+    width: @tablet-width;
     padding-left: 50px;
     padding-right: 50px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1050px;
-    padding-left: 50px;
-    padding-right: 50px;
+    width: @desktop-width;
   }
 }
 
@@ -44,11 +43,4 @@
   font-size: 13px;
   line-height: 24px;
   font-weight: normal;
-}
-
-@media (min-width: @tablet-width) {
-  .centerer() {
-    width: 768px;
-    padding: 0 50px;
-  }
 }

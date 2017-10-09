@@ -3,8 +3,8 @@
 }
 
 .contacts__wrapper {
-  width: 260px;
-  margin: 0 auto;
+  box-sizing: border-box;
+  .centerer();
   padding: 27px 30px 39px 30px;
 }
 
@@ -55,7 +55,6 @@
 
   .contacts__wrapper {
     padding: 0;
-    .centerer();
   }
 
   .contacts__list {
@@ -86,8 +85,9 @@
   }
 
   .contacts__wrapper {
-    .reset();
+    box-sizing: content-box;
     width: 300px;
+    margin: 0;
     padding: 0 50px 0 175px;
   }
 
