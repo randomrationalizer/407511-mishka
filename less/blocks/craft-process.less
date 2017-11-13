@@ -1,19 +1,36 @@
 .craft-process {
   .centerer();
-  box-shadow: 0 0 0 3px blue;
 }
 
 .craft-process__wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 30px 30px 58px 30px;
+  margin: 0 30px 58px 30px;
+  border: 1px solid @card-border;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .craft-process__title {
+  position: relative;
   margin: 25px 0;
-  padding-left: 64px;
-  .heading-middle();
+  padding-left: 90px;
+  .heading-small();
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 34px;
+    width: 32px;
+    height: 22px;
+    margin-top: -11px;
+    background: url("/img/icon-video.png") no-repeat 50% 50%;
+  }
 }
 
 .craft-process__description {
@@ -25,19 +42,55 @@
   .text-small();
 }
 
+.craft-process__player {
+  position: relative;
+  width: 260px;
+  height: 150px;
+}
+
+.craft-process__play-btn {
+  position: absolute;
+  top: 36px;
+  left: 79px;
+  width: 102px;
+  height: 78px;
+  border: none;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+}
+
 .craft-process__order {
-  width: 152px;
+  width: 192px;
 }
 
 @media (min-width: @tablet-width) {
   .craft-process__wrapper {
-    padding: 0 0 63px 0;
+    margin: 0 0 63px 0;
+  }
+
+  .craft-process__player {
+    width: 668px;
+    height: 455px;
+    order: 1;
   }
 
   .craft-process__video {
     width: 668px;
     height: 455px;
-    order: 1;
+  }
+
+  .craft-process__play-btn {
+    top: 189px;
+    left: 283px;
   }
 
   .craft-process__header {
@@ -45,7 +98,13 @@
   }
 
   .craft-process__title {
-    margin: 40px 42px;
+    margin: 39px 42px 33px 42px;
+    padding-left: 65px;
+    font-size: 20px;
+
+    &::before {
+      left: 0;
+    }
   }
 
   .craft-process__description {
@@ -54,17 +113,17 @@
   }
 
   .craft-process__text {
-    margin: 0 0 40px 0;
+    margin: 0 0 33px 0;
+    font-size: 15px;
   }
 
   .craft-process__order {
-    box-sizing: border-box;
     width: 100%;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .craft-process__video {
+  .craft-process__player {
     position: absolute;
     top: 0;
     left: 0;
@@ -72,19 +131,39 @@
     height: 455px;
   }
 
+  .craft-process__video {
+    width: 682px;
+    height: 455px;
+  }
+
+  .craft-process__play-btn {
+    left: 291px;
+  }
+
   .craft-process__wrapper {
-    padding: 0 0 0 700px;
     width: 350px;
+    margin: 0 0 105px 0;
     min-height: 455px;
+    padding: 0 0 0 700px;
   }
 
   .craft-process__title {
-    padding: 50px 0 0 0;
+    padding: 51px 0 0 0;
     margin: 47px 60px 40px 62px;
     width: 150px;
+
+    &::before {
+      top: 0;
+      left: 0;
+      margin: 0;
+    }
   }
 
   .craft-process__description {
     padding: 0 60px 60px 62px;
+  }
+
+  .craft-process__order {
+    width: 230px;
   }
 }

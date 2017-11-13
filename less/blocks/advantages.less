@@ -1,17 +1,16 @@
 .advantages {
   .centerer();
-  box-shadow: 0 0 0 3px red;
 }
 
 .advantages__wrapper {
-  padding: 30px;
+  padding: 26px 30px;
 }
 
 .advantages__title {
   .reset();
   flex-direction: column;
-  margin-bottom: 28px;
-  .heading-big();
+  margin-bottom: 22px;
+  .heading-middle();
 }
 
 .advantages__list {
@@ -22,30 +21,105 @@
 }
 
 .advantages__item {
-  margin-bottom: 28px;
-  padding-top: 55px;
-  font-size: 17px;
-  line-height: 20px;
-  font-weight: bold;
-  color: @black;
+  display: flex;
+  flex-direction: column;
 
   &:last-child {
     margin-bottom: 0;
   }
 }
 
+.advantages__text {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  color: @black;
+
+  &--eco-friendly {
+    width: 180px;
+  }
+
+  &--stylish {
+    width: 210px;
+  }
+
+  &--likes {
+    width: 180px;
+  }
+
+  &--hand-made {
+    width: 210px;
+  }
+
+  &--patriotic {
+    width: 260px;
+  }
+
+  &--gift-wrap {
+    width: 210px;
+  }
+}
+
+.advantages__icon path {
+  fill: @light-green;
+}
+
+.advantages__icon {
+  &--eco-friendly {
+    width: 33px;
+    height: 38px;
+    margin: 0 0 18px 7px;
+  }
+
+  &--stylish {
+    width: 47px;
+    height: 27px;
+    margin: 25px 0 28px 0;
+  }
+
+  &--likes {
+    width: 34px;
+    height: 27px;
+    margin: 30px 0 23px 7px;
+  }
+
+  &--hand-made {
+    width: 35px;
+    height: 34px;
+    margin: 27px 0 18px 3px;
+  }
+
+  &--patriotic {
+    width: 55px;
+    height: 23px;
+    margin: 28px 0 28px -6px;
+  }
+
+  &--gift-wrap {
+    width: 33px;
+    height: 32px;
+    margin: 26px 0 21px 3px;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .advantages__wrapper {
-    padding: 50px 0;
+    padding: 46px 0 70px 0;
+  }
+
+  .advantages__title {
+    .heading-big();
+    margin-bottom: 33px;
   }
 
   .advantages__list {
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: space-between;
   }
 
   .advantages__item {
-    width: 300px;
+    width: 334px;
 
     &--eco-friendly {
       order: 1;
@@ -69,6 +143,61 @@
 
     &--gift-wrap {
       order: 6;
+    }
+  }
+
+  .advantages__text {
+    font-size: 20px;
+    line-height: 22px;
+
+    &--eco-friendly {
+      width: 210px;
+    }
+
+    &--stylish {
+      width: 240px;
+    }
+
+    &--likes {
+      width: 215px;
+    }
+
+    &--hand-made {
+      width: 250px;
+    }
+
+    &--patriotic {
+      width: 300px;
+    }
+
+    &--gift-wrap {
+      width: 250px;
+    }
+  }
+
+  .advantages__icon {
+    &--eco-friendly {
+      margin: 0 0 15px 7px;
+    }
+
+    &--stylish {
+      margin: 52px 0 23px 0;
+    }
+
+    &--likes {
+      margin: 57px 0 18px 7px;
+    }
+
+    &--hand-made {
+      margin: 0 0 15px 3px;
+    }
+
+    &--patriotic {
+      margin: 55px 0 25px -6px;
+    }
+
+    &--gift-wrap {
+      margin: 53px 0 18px 3px;
     }
   }
 }

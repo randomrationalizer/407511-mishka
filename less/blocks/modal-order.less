@@ -1,6 +1,14 @@
 .modal-order {
   display: none;
-  .centerer();
+  position: fixed;
+  top: 70px;
+  left: 50%;
+  z-index: 5;
+  width: 320px;
+  margin-left: -160px;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+  background-color: @white;
+  border: 1px solid @input-gray;
 }
 
 .modal-order__wrapper {
@@ -10,18 +18,44 @@
 .modal-order__title {
   .reset();
   margin-bottom: 18px;
-  .heading-big();
+  .heading-middle();
   text-transform: uppercase;
   text-align: center;
 }
 
 .modal-order__button {
-  box-sizing: content-box;
-  font-size: 17px;
+  width: 100%;
+  padding: 16px 20px;
   line-height: 17px;
-  font-weight: bold;
-  text-transform: uppercase;
   color: @white;
   border-color: @light-green;
   background-color: @light-green;
+
+  &:hover,
+  &:focus {
+    border-color: @dark-gray;
+  }
+}
+
+.modal-order--show {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .modal-order {
+    width: 566px;
+    margin-left: -283px;
+  }
+
+  .modal-order__wrapper {
+    padding: 34px 108px 46px 108px;
+  }
+
+  .modal-order__title {
+    width: 355px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 57px;
+    text-align: left;
+  }
 }

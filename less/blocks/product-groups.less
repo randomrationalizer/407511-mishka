@@ -1,6 +1,5 @@
 .product-groups {
   .centerer();
-  box-shadow: 0 0 0 3px red;
 }
 
 .product-groups__list {
@@ -8,38 +7,119 @@
   list-style: none;
 }
 
+.product-groups__item {
+  width: 100%;
+
+}
+
 .product-groups__link {
-  display: block;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  min-height: 103px;
+  background-color: @light-green;
+
+  &:hover,
+  &:focus {
+    transform: scaleY(1.04);
+
+    .product-groups__icon path {
+      fill-opacity: 0.7;
+    }
+
+    .product-groups__icon,
+    .product-groups__title {
+      transform: translateY(-5px);
+    }
+  }
+
+  &:active {
+    .product-groups__title {
+      opacity: 0.3;
+    }
+
+    .product-groups__icon path {
+      fill-opacity: 0.3;
+    }
+  }
+}
+
+.product-groups__item--interior .product-groups__link {
+  padding: 23px 38px 18px 30px;
+
+  &:hover,
+  &:focus {
+    background-color: @interior-btn-hover;
+  }
+}
+
+.product-groups__item--toys .product-groups__link {
+  background-color: @dark-green;
+  padding: 20px 27px 22px 30px;
+
+  &:hover,
+  &:focus {
+    background-color: @toys-btn-hover;
+  }
+}
+
+.product-groups__title {
   width: 130px;
-  padding: 28px 160px 28px 30px;
   font-size: 19px;
   line-height: 24px;
   font-weight: bold;
   color: @white;
   text-align: left;
   text-decoration: none;
-  background-color: @light-green;
+}
 
-  &--toys {
-    background-color: @dark-green;
-  }
+.product-groups__icon path {
+  fill: @icon-green;
+  fill-opacity: 0.5;
 }
 
 @media (min-width: @tablet-width) {
+  .product-groups {
+    background-color: @bg-gray;
+  }
+
   .product-groups__list {
     display: flex;
     flex-wrap: wrap;
   }
 
+  .product-groups__item {
+    width: 50%;
+  }
+
   .product-groups__link {
-    box-sizing: border-box;
-    width: 334px;
     min-height: 119px;
+  }
+
+  .product-groups__item--interior .product-groups__link {
+    padding: 30px 36px 27px 36px;
+  }
+
+  .product-groups__item--toys .product-groups__link {
+    padding: 31px 33px 27px 36px;
+  }
+
+  .product-groups__title {
+    width: 167px;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .product-groups__link {
-    width: 525px;
+  .product-groups__title {
+    width: 175px;
+  }
+
+  .product-groups__item--toys .product-groups__link {
+    padding-right: 35px;
   }
 }

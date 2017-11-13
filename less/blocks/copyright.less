@@ -1,3 +1,15 @@
+.copyright {
+  padding: 22px 0 23px 0;
+}
+
+.copyright__logo {
+  margin-left: 20px;
+
+  path {
+    fill: @light-green;
+  }
+}
+
 .copyright__text {
   font-size: 19px;
   line-height: 19px;
@@ -7,5 +19,28 @@
 }
 
 .copyright__link {
-  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    .copyright__logo path {
+      fill: @toys-btn-hover;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    .copyright__logo path {
+      fill-opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__link {
+    justify-content: flex-end;
+  }
 }

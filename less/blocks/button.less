@@ -1,7 +1,8 @@
 .button {
   display: inline-block;
-  width: 220px;
-  padding: 18px 20px;
+  box-sizing: border-box;
+  width: 260px;
+  padding: 13px 20px 15px 20px;
   text-align: center;
   vertical-align: middle;
   background-color: @white;
@@ -11,4 +12,14 @@
   font-weight: bold;
   color: inherit;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: @dark-gray;
+    color: @white;
+  }
+
+  &:active {
+    color: @btn-active-gray;
+  }
 }

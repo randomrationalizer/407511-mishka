@@ -1,45 +1,88 @@
 .catalog-item {
-  box-shadow: 0 0 0 3px green;
+  box-sizing: border-box;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 374px;
+  border: 1px solid @card-border;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .catalog-item__title {
-  margin: 26px 0 0 0;
-  .heading-middle();
+  margin: 0;
+  padding: 32px 28px 6px 28px;
+  .heading-small();
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog-item__description {
   margin: 0 0 18px 0;
+  padding: 0 28px;
   font-size: 13px;
   line-height: 30px;
   font-weight: normal;
 }
 
 .catalog-item__price {
-  margin: 0 0 28px 0;
-  font: inherit;
+  margin-top: 22px;
+  font-size: 15px;
+  line-height: 24px;
   font-weight: bold;
   color: @black;
 }
 
+.catalog-item__cart {
+  width: 21px;
+  height: 19px;
+  margin-top: 22px;
+}
+
+.catalog-item__cart path {
+  fill-opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    fill: @light-green;
+    fill-opacity: 1;
+  }
+
+  &:active {
+    fill-opacity: 0.3;
+  }
+}
+
 .catalog-item__photo {
+  display: block;
   width: 260px;
-  height: 165px;
+  height: 195px;
+  border: none;
 }
 
 .catalog-item__wrapper {
   display: flex;
   justify-content: space-between;
+  min-height: 72px;
+  margin: 0 28px;
+  border-top: 1px solid @card-border;
 }
 
 @media (min-width: @tablet-width) {
   .catalog-item {
     width: auto;
-    padding: 0 32px 0 363px;
+    padding: 0 0 0 334px;
     min-height: 334px;
   }
 
@@ -49,6 +92,24 @@
     left: 0;
     width: 334px;
     height: 334px;
+  }
+
+  .catalog-item__wrapper {
+    margin: 0 32px;
+  }
+
+  .catalog-item__title {
+    margin: 0;
+    padding: 28px 26px 6px 26px;
+    font-size: 20px;
+  }
+
+  .catalog-item__description {
+    font-size: 15px;
+  }
+
+  .catalog-item__price {
+    font-size: 17px;
   }
 }
 
@@ -66,11 +127,14 @@
   }
 
   .catalog-item__title {
-    margin: 28px 33px 12px 37px;
+    padding: 28px 32px 6px 27px;
   }
 
-  .catalog-item__description,
+  .catalog-item__description {
+    padding: 0 32px 0 27px;
+  }
+
   .catalog-item__wrapper {
-    margin: 0 33px 0 37px;
+    margin: 0 32px 0 27px;
   }
 }

@@ -14,19 +14,47 @@
   }
 }
 
+.full-width-centerer() {
+  width: 320px;
+  margin: auto;
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
 .reset() {
   margin: 0;
   padding: 0;
 }
 
+.heading-huge() {
+  font-size: 53px;
+  line-height: 57px;
+  font-weight: bold;
+  color: @black;
+}
+
 .heading-big() {
+  font-size: 43px;
+  line-height: 50px;
+  font-weight: bold;
+  color: @black;
+}
+
+.heading-middle() {
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
   color: @black;
 }
 
-.heading-middle() {
+.heading-small() {
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;

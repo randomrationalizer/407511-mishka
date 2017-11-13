@@ -1,91 +1,46 @@
 .page-header {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  .centerer();
-  box-shadow: 0 0 0 3px red;
+  width: 100%;
+  min-height: 79px;
 }
 
 .page-header__toggle {
-  display: inline-block;
+  display: block;
   position: absolute;
   top: 29px;
   right: 30px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background: @white url("/img/icon-menu-open.svg") no-repeat 0 0;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
 }
 
-.page-header__title-block {
-  min-height: 177px;
-  background-color: @light-gray;
-  box-shadow: 0 0 0 3px orange;
-
-  &--main-page {
-    min-height: 283px;
-    background: @light-gray url("/img/hero-mobile@1x.jpg") no-repeat 50% -20px;
-  }
-}
-
-.page-header__title {
-  margin: 0;
-  padding: 74px 30px;
-  font-size: 27px;
-  line-height: 30px;
-  font-weight: bold;
-  color: @black;
-  text-align: center;
-
-  &--main-page {
-    padding-bottom: 120px;
+@media (max-width: 707px) {
+  .main-nav--nojs ~ .page-header__toggle {
+    display: none;
   }
 
-  &--form {
-    color: @light-black;
+  .main-nav--opened ~ .page-header__toggle {
+    background: @white url("/img/icon-menu-close.svg") no-repeat 0 0;
+  }
+
+  .main-nav--closed ~ .page-header__toggle {
+    background: @white url("/img/icon-menu-open.svg") no-repeat 0 0;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .page-header {
-    padding: 0 50px;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
   .page-header__toggle {
     display: none;
-  }
-
-  .page-header__title-block {
-    width: 100%;
-    order: 5;
-    min-height: 226px;
-
-    &--main-page {
-      min-height: 567px;
-      order: 5;
-      background-size: 100%;
-    }
-
-    .page-header__title {
-      padding: 74px 0;
-    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
-    padding: 0 50px;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .page-header__title-block {
-    order: 5;
-    width: 100%;
-    min-height: 225px;
-
-    &--main-page {
-      min-height: 626px;
-      order: 5;
-      background-size: 100%;
-    }
+  width: @desktop-width;
+  margin: 0 auto;
   }
 }

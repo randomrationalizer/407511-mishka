@@ -5,6 +5,8 @@
 }
 
 .modal-form__legend {
+  display: block;
+  width: 100%;
   margin-bottom: 20px;
   .text-middle();
   text-align: center;
@@ -13,8 +15,57 @@
 .modal-form__list {
   .reset();
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-form__field {
+  width: 82px;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 7px;
+  }
 }
 
 .modal-form__radio {
   display: inline-block;
+}
+
+.modal-form__label {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px 0;
+  border: 2px solid @table-border;
+  font-size: 17px;
+  line-height: 17px;
+  text-align: center;
+}
+
+.modal-form__radio:checked + .modal-form__label {
+  border-color: @dark-green-2;
+}
+
+.modal-form__radio:checked:hover + .modal-form__label {
+  border-color: @dark-green-2;
+}
+
+.modal-form__radio:hover + .modal-form__label {
+  border-color: @input-gray;
+}
+
+.modal-form__radio:active + .modal-form__label,
+.modal-form__radio:focus + .modal-form__label {
+  border-color: @dark-green-2;
+}
+
+@media (min-width: @tablet-width) {
+  .modal-form__field {
+    width: 112px;
+  }
+
+.modal-form__legend {
+  font-size: 17px;
+  }
 }
