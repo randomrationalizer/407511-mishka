@@ -1,5 +1,6 @@
 .custom-order {
-  .centerer();
+  margin: 0 auto;
+  width: 320px;
 }
 
 .custom-order__wrapper {
@@ -12,6 +13,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .custom-order {
+    width: 100%;
+    margin: 0;
+  }
+
   .custom-order__wrapper {
     padding: 74px 0 50px 0;
   }
@@ -20,6 +26,7 @@
     font-size: 17px;
     line-height: 30px;
     width: 615px;
+    padding: 0 50px;
   }
 }
 

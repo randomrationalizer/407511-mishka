@@ -48,6 +48,15 @@
   height: 150px;
 }
 
+.craft-process__video {
+  background: url("/img/video-mobile@1x.jpg") no-repeat 50% 50%;
+  background-size: 100%;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("/img/video-mobile@2x.jpg");
+  }
+}
+
 .craft-process__play-btn {
   position: absolute;
   top: 36px;
@@ -86,6 +95,12 @@
   .craft-process__video {
     width: 668px;
     height: 455px;
+    background: url("/img/video-tablet@1x.jpg") no-repeat 50% 50%;
+    background-size: 100%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("/img/video-tablet@2x.jpg");
+    }
   }
 
   .craft-process__play-btn {
@@ -134,6 +149,12 @@
   .craft-process__video {
     width: 682px;
     height: 455px;
+    background: url("/img/video-desktop@1x.jpg") no-repeat 50% 50%;
+    background-size: 100%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("/img/video-desktop@2x.jpg");
+    }
   }
 
   .craft-process__play-btn {

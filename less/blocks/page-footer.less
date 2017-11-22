@@ -1,6 +1,7 @@
 .page-footer {
-  .centerer();
+  width: 100%;
   background-color: @light-gray;
+  background-size: 100% auto;
 }
 
 .page-footer__wrapper {
@@ -8,7 +9,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 100px;
+  width: 260px;
+  margin: 0 auto;
   padding: 0 30px;
 }
 
@@ -52,8 +54,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-
-    .reset();
+    width: 668px;
+    padding: 0 50px;
   }
 
   .page-footer__social {
@@ -67,6 +69,6 @@
 
 @media (min-width: @desktop-width) {
   .page-footer__wrapper {
-    min-height: 160px;
+    width: 1050px;
   }
 }
