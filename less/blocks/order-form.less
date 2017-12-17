@@ -169,10 +169,7 @@
     right: 8px;
     width: 25px;
     height: 24px;
-
-    path {
-      fill-opacity: 0.2;
-    }
+    fill-opacity: 0.2;
   }
 
   &--email {
@@ -180,10 +177,7 @@
     right: 4px;
     width: 32px;
     height: 21px;
-
-    path {
-      fill-opacity: 0.2;
-    }
+    fill-opacity: 0.2;
   }
 }
 
@@ -203,16 +197,16 @@
     border-bottom: 2px solid @dark-green-2;
   }
 
-  &--tel:hover ~ .order-form__icon path,
-  &--tel:focus ~ .order-form__icon path,
-  &--tel:active ~ .order-form__icon path {
+  &--tel:hover ~ .order-form__icon,
+  &--tel:focus ~ .order-form__icon,
+  &--tel:active ~ .order-form__icon {
     fill: @dark-green-2;
     fill-opacity: 1;
   }
 
-  &--email:hover ~ .order-form__icon path,
-  &--email:focus ~ .order-form__icon path,
-  &--email:active ~ .order-form__icon path {
+  &--email:hover ~ .order-form__icon,
+  &--email:focus ~ .order-form__icon,
+  &--email:active ~ .order-form__icon {
     fill: @dark-green-2;
     fill-opacity: 1;
   }

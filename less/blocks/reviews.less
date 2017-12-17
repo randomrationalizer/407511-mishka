@@ -46,7 +46,6 @@
 }
 
 .reviews__control {
-  position: relative;
   display: inline-block;
   width: 50%;
   height: 52px;
@@ -54,28 +53,6 @@
   font-size: 0;
   background-color: @white;
   border: 1px solid @light-gray;
-
-  &--prev::after {
-    position: absolute;
-    content: "";
-    top: 13px;
-    left: 38px;
-    z-index: 3;
-    width: 51px;
-    height: 26px;
-    background: @white url("/img/icon-left-arrow.svg") no-repeat 0 0;
-  }
-
-  &--next::after {
-    position: absolute;
-    content: "";
-    top: 13px;
-    right: 41px;
-    z-index: 3;
-    width: 51px;
-    height: 26px;
-    background: @white url("/img/icon-right-arrow.svg") no-repeat 0 0;
-  }
 
   &:hover,
   &:focus {
@@ -167,19 +144,19 @@
     &--prev {
       width: 61px;
 
-      &::after {
+      /*&::after {
         top: 0;
         left: 11px;
-      }
+      }*/
     }
 
     &--next {
       width: 69px;
 
-      &::after {
+      /*&::after {
         top: 0;
         right: 19px;
-      }
+      }*/
     }
   }
 }
@@ -216,10 +193,10 @@
     &--prev {
       width: 69px;
 
-      &::after {
+      /*&::after {
         top: 0;
         left: 19px;
-      }
+      }*/
     }
   }
 
