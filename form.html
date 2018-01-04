@@ -8,6 +8,9 @@
     <script src="js/picturefill.min.js"></script>
   </head>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <nav class="main-nav main-nav--open main-nav--nojs">
         <div class="main-nav__logo-wrapper">
@@ -15,7 +18,7 @@
             <picture>
               <source media="(min-width: 1150px)" srcset="/img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="/img/logo-tablet.svg">
-              <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин Мишка" />
+              <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин Мишка">
             </picture>
           </a>
         </div>
@@ -31,7 +34,7 @@
           <li class="main-nav__item functions-list__item functions-list__item--search">
             <a class="functions-list__link" href="#" aria-label="Поиск товаров">
               <svg class="functions-list__icon functions-list__icon--search" width="17.6px" height="17.6px">
-                <use xlink:href="img/sprite.svg#icon-search"></use>
+                <use xlink:href="#icon-search"></use>
               </svg>
               <span class="functions-list__link-text functions-list__link-text--search">Поиск товаров</span>
             </a>
@@ -39,7 +42,7 @@
           <li class="main-nav__item functions-list__item functions-list__item--cart">
             <a class="functions-list__link" href="#">
               <svg class="functions-list__icon functions-list__icon--cart" width="20.294px" height="18.849px">
-                <use xlink:href="img/sprite.svg#icon-cart"></use>
+                <use xlink:href="#icon-cart"></use>
               </svg>
               <span class="functions-list__link-text">Корзина: пока пуста</span>
             </a>
@@ -73,11 +76,11 @@
                 <legend class="order-form__legend">Тип</legend>
                 <ul class="order-form__group order-form__group--type">
                   <li class="order-form__field order-form__field--radio">
-                    <input class="visually-hidden order-form__radio" type="radio" id="accessory" name="product-type" value="interior-accessory" checked />
+                    <input class="visually-hidden order-form__radio" type="radio" id="accessory" name="product-type" value="interior-accessory" checked="">
                     <label class="order-form__label order-form__label--radio" for="accessory">Аксессуар для интерьера</label>
                   </li>
                   <li class="order-form__field order-form__field--radio">
-                    <input class="visually-hidden order-form__radio" type="radio" id="toy" name="product-type" value="toy" />
+                    <input class="visually-hidden order-form__radio" type="radio" id="toy" name="product-type" value="toy">
                     <label class="order-form__label order-form__label--radio" for="toy">Детская игрушка</label>
                   </li>
                 </ul>
@@ -88,27 +91,27 @@
                 <legend class="order-form__legend">Цвет</legend>
                 <ul class="order-form__group order-form__group--color">
                   <li class="order-form__field order-form__field--checkbox">
-                    <input class="visually-hidden order-form__checkbox" type="checkbox" id="color-white" name="product-color" value="white" checked />
+                    <input class="visually-hidden order-form__checkbox" type="checkbox" id="color-white" name="product-color" value="white" checked="">
                     <label class="order-form__label order-form__label--checkbox" for="color-white">Белый</label>
                   </li>
                   <li class="order-form__field order-form__field--checkbox">
-                    <input class="visually-hidden order-form__checkbox" type="checkbox" id="color-gray" name="product-color" value="gray" checked />
+                    <input class="visually-hidden order-form__checkbox" type="checkbox" id="color-gray" name="product-color" value="gray" checked="">
                     <label class="order-form__label order-form__label--checkbox" for="color-gray">Серый</label>
                   </li>
                   <li class="order-form__field order-form__field--checkbox">
-                    <input class="visually-hidden order-form__checkbox" type="checkbox" id="color-tiffany" name="product-color" value="tiffany" />
+                    <input class="visually-hidden order-form__checkbox" type="checkbox" id="color-tiffany" name="product-color" value="tiffany">
                     <label class="order-form__label order-form__label--checkbox" for="color-tiffany">«Тиффани»</label>
                   </li>
                   <li class="order-form__field order-form__field--checkbox">
-                    <input class="visually-hidden order-form__checkbox" type="checkbox" id="color-black" name="product-color" value="black" />
+                    <input class="visually-hidden order-form__checkbox" type="checkbox" id="color-black" name="product-color" value="black">
                     <label class="order-form__label order-form__label--checkbox" for="color-black">Черный</label>
                   </li>
                   <li class="order-form__field order-form__field--checkbox">
-                    <input class="visually-hidden order-form__checkbox" type="checkbox" id="color-pink" name="product-color" value="pink" />
+                    <input class="visually-hidden order-form__checkbox" type="checkbox" id="color-pink" name="product-color" value="pink">
                     <label class="order-form__label order-form__label--checkbox" for="color-pink">Розовый</label>
                   </li>
                   <li class="order-form__field order-form__field--checkbox">
-                    <input class="visually-hidden order-form__checkbox" type="checkbox" id="color-orange" name="product-color" value="orange" />
+                    <input class="visually-hidden order-form__checkbox" type="checkbox" id="color-orange" name="product-color" value="orange">
                     <label class="order-form__label order-form__label--checkbox" for="color-orange">Оранжевый</label>
                   </li>
                 </ul>
@@ -120,15 +123,15 @@
                 <ul class="order-form__group order-form__group--name">
                   <li class="order-form__field order-form__field--text">
                     <label class="order-form__label order-form__label--text" for="user-name">Имя:</label>
-                    <input class="order-form__input" type="text" id="user-name" name="user-name" placeholder="Введите ваше имя*" required />
+                    <input class="order-form__input" type="text" id="user-name" name="user-name" placeholder="Введите ваше имя*" required="">
                   </li>
                   <li class="order-form__field order-form__field--text">
                     <label class="order-form__label order-form__label--text" for="user-surname">Фамилия:</label>
-                    <input class="order-form__input" type="text" id="user-surname" name="user-surname" placeholder="Укажите фамилию*" required />
+                    <input class="order-form__input" type="text" id="user-surname" name="user-surname" placeholder="Укажите фамилию*" required="">
                   </li>
                   <li class="order-form__field order-form__field--text">
                     <label class="order-form__label order-form__label--text" for="user-middle-name">Отчество:</label>
-                    <input class="order-form__input" type="text" id="user-middle-name" name="user-middle-name" placeholder="Отчество, если желаете" />
+                    <input class="order-form__input" type="text" id="user-middle-name" name="user-middle-name" placeholder="Отчество, если желаете">
                   </li>
                 </ul>
               </div>
@@ -136,16 +139,16 @@
             <ul class="order-form__group order-form__group--contacts">
               <li class="order-form__field order-form__field--tel">
                 <label class="order-form__label order-form__label--tel" for="tel">Тел:</label>
-                <input class="order-form__input order-form__input--tel" type="tel" id="tel" name="user-tel" placeholder="+7 ХХХ ХХ ХХ*" required />
+                <input class="order-form__input order-form__input--tel" type="tel" id="tel" name="user-tel" placeholder="+7 ХХХ ХХ ХХ*" required="">
                 <svg class="order-form__icon order-form__icon--tel" width="24.829px" height="24.333px" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  <use xlink:href="#icon-phone"></use>
                 </svg>
               </li>
               <li class="order-form__field order-form__field--email">
                 <label class="order-form__label order-form__label--email" for="email">e-mail:</label>
-                <input class="order-form__input order-form__input--email" type="email" id="email" name="user-email" placeholder="Ваш Email*" required />
+                <input class="order-form__input order-form__input--email" type="email" id="email" name="user-email" placeholder="Ваш Email*" required="">
                 <svg class="order-form__icon order-form__icon--email" width="32px" height="32px" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                  <use xlink:href="#icon-mail"></use>
                 </svg>
               </li>
             </ul>
@@ -165,7 +168,7 @@
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
           <svg class="page-footer__logo-image" width="101.615px" height="34.056px">
-            <use xlink:href="img/sprite.svg#logo-footer"></use>
+            <use xlink:href="#logo-footer"></use>
           </svg>
         </div>
         <section class="page-footer__social social">
@@ -175,7 +178,7 @@
               <a class="social__link social__link--instagram" href="#">
                 <span class="visually-hidden">Инстаграм</span>
                 <svg class="social__icon social__icon--inst" width="21.769px" height="21.334px">
-                  <use xlink:href="img/sprite.svg#icon-insta"></use>
+                  <use xlink:href="#icon-insta"></use>
                 </svg>
               </a>
             </li>
@@ -183,7 +186,7 @@
               <a class="social__link social__link--facebook" href="#">
                 <span class="visually-hidden">Facebook</span>
                 <svg class="social__icon social__icon--fb" width="14.962px" height="27.718px">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  <use xlink:href="#icon-fb"></use>
                 </svg>
               </a>
             </li>
@@ -191,7 +194,7 @@
               <a class="social__link social__link--twitter" href="#">
                 <span class="visually-hidden">Твиттер</span>
                 <svg class="social__icon social__icon--tw" width="23.494px" height="20.168px">
-                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                  <use xlink:href="#icon-twitter"></use>
                 </svg>
               </a>
             </li>
@@ -201,7 +204,7 @@
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy">
             <span class="copyright__text">Разработано</span>
             <svg class="copyright__logo" width="26.943px" height="34.09px">
-              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+              <use xlink:href="#icon-htmlacademy"></use>
             </svg>
           </a>
         </div>
