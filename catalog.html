@@ -6,7 +6,7 @@
     <title>Каталог товаров - интернет-магазин Мишка</title>
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.min.js"></script>
   </head>
   <body>
@@ -15,7 +15,7 @@
     </div>
     <header class="page-header">
       <nav class="main-nav main-nav--open main-nav--nojs">
-        <div class="main-nav__logo-wrapper">
+        <div class="main-nav__logo-wrapper main-nav__logo-wrapper--inner-page">
           <a class="main-nav__logo" href="index.html">
             <picture>
               <source media="(min-width: 1150px)" srcset="/img/logo-desktop.svg">
@@ -24,7 +24,7 @@
             </picture>
           </a>
         </div>
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list site-list site-list--inner-page">
           <li class="main-nav__item site-list__item site-list__item--catalog site-list__item--active">
             <a class="site-list__link">Каталог товаров</a>
           </li>
@@ -32,7 +32,7 @@
             <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <ul class="main-nav__list functions-list">
+        <ul class="main-nav__list functions-list functions-list--inner-page">
           <li class="main-nav__item functions-list__item functions-list__item--search">
             <a class="functions-list__link" href="#" aria-label="Поиск товаров">
               <svg class="functions-list__icon functions-list__icon--search" width="17.6px" height="17.6px">
@@ -88,7 +88,7 @@
                 <p class="catalog-item__description">Рост 30 см, вес 200 г</p>
               </div>
               <div class="catalog-item__wrapper">
-                <b class="catalog-item__price">1 500 руб.</b>
+                <b class="catalog-item__price">1 200 руб.</b>
                 <a class="catalog-item__button cart-button modal-button" href="#">
                   <span class="visually-hidden">В корзину</span>
                   <svg class="catalog-item__cart" width="20.294px" height="18.849px">
@@ -113,7 +113,7 @@
                 <p class="catalog-item__description">Диаметр 15 см, высота 10 см</p>
               </div>
               <div class="catalog-item__wrapper">
-                <b class="catalog-item__price">1 500 руб.</b>
+                <b class="catalog-item__price">690 руб.</b>
                 <a class="catalog-item__button cart-button modal-button" href="#">
                   <span class="visually-hidden">В корзину</span>
                   <svg class="catalog-item__cart" width="20.294px" height="18.849px">
@@ -175,7 +175,7 @@
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
           <svg class="page-footer__logo-image" width="101.615px" height="34.056px">
-            <use xlink:href="#logo-footer"></use>
+            <use xlink:href="#icon-logo-footer"></use>
           </svg>
         </div>
         <section class="page-footer__social social">

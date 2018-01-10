@@ -47,12 +47,16 @@
     order: 1;
     background-color: @white;
     padding: 0;
-    border-bottom: 1px solid @light-gray;
+    border-bottom: 1px solid @border-gray;
+
+    &--inner-page {
+      border-bottom: 1px solid @dark-border;
+    }
   }
 
   .site-list__item {
     font-size: 17px;
-    padding: 32px 0;
+    padding: 31px 0 32px 0;
 
     &--catalog {
       padding-right: 34px;
@@ -60,13 +64,13 @@
     }
 
     &--custom {
-      padding-left: 34px;
+      padding-left: 36px;
       width: 226px;
     }
   }
 
   .site-list__item:first-child {
     padding-left: 50px;
-    border-right: 1px solid @light-gray;
+    border-right: 1px solid @table-border;
   }
 }

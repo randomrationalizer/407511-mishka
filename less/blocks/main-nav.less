@@ -96,8 +96,12 @@
     width: 322px;
     min-height: 89px;
     padding-left: 48px;
-    border-bottom: 1px solid @light-gray;
+    border-bottom: 1px solid @border-gray;
     flex-grow: 1;
+
+    &--inner-page {
+      border-bottom: 1px solid @dark-border;
+    }
   }
 
   .main-nav__logo {
@@ -146,6 +150,6 @@
   }
 
   .main-nav__delivery {
-    padding: 20px 50px 20px 0;
+    padding: 16px 50px 25px 0;
   }
 }

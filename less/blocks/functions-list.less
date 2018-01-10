@@ -59,12 +59,16 @@
     flex-direction: row;
     align-items: center;
     order: 2;
-    border-bottom: 1px solid @light-gray;
+    border-bottom: 1px solid @border-gray;
+
+    &--inner-page {
+      border-bottom: 1px solid @dark-border;
+    }
   }
 
   .functions-list__item {
     padding: 32px 31px;
-    border-left: 1px solid @light-gray;
+    border-left: 1px solid @table-border;
     border-top: none;
 
     &--search {
@@ -74,7 +78,7 @@
 
     &--cart {
       width: 233px;
-      padding: 33px 50px 32px 31px;
+      padding: 31px 50px 34px 31px;
     }
   }
 

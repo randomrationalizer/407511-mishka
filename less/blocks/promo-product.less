@@ -12,11 +12,12 @@
     height: 7px;
     background: url("/img/bg-zigzag-line.svg") repeat-x 0 0;
     background-size: 100% 7px;
+    background-position: -7px 0;
   }
 }
 
 .promo-product__wrapper {
-  padding: 30px 30px 35px 30px;
+  padding: 28px 30px 42px 30px;
 }
 
 .promo-product__title {
@@ -62,7 +63,8 @@
 @media (min-width: @tablet-width) {
   .promo-product::after {
     height: 17px;
-    background-size: auto 17px;
+    background-size: 768px 17px;
+    background-position: -20px 0;
   }
 
   .promo-product__wrapper {
@@ -72,7 +74,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     min-height: 506px;
-    padding: 52px 0;
+    padding: 32px 0 70px 0;
   }
 
   .promo-product__container {
@@ -90,8 +92,8 @@
 
   .promo-product__subtitle {
     position: absolute;
-    top: 13px;
-    right: 0;
+    top: 11px;
+    right: 12px;
     width: 100px;
     order: 2;
     text-align: center;
@@ -104,7 +106,7 @@
     order: 3;
     font-size: 17px;
     line-height: 30px;
-    margin: 47px 0 33px;
+    margin: 50px 0 33px;
   }
 
   .promo-product__properties {
@@ -115,7 +117,7 @@
 
   .promo-product__photo {
     position: absolute;
-    top: 156px;
+    top: 139px;
     right: 0;
     width: 334px;
     height: 404px;
@@ -124,7 +126,7 @@
 
   .promo-product__price {
     width: 292px;
-    margin: 0 0 33px 0;
+    margin: -3px 0 35px 0;
     order: 6;
     font-size: 20px;
   }
@@ -140,12 +142,12 @@
     left: 50px;
     width: 1050px;
     height: 23px;
-    background-position: 95px 0;
-    background-size: auto 23px;
+    background-position: 80px 0;
+    background-size: 100% 23px;
   }
 
   .promo-product__wrapper {
-    padding: 129px 0 73px 175px;
+    padding: 105px 0 95px 175px;
   }
 
   .promo-product__title {
@@ -155,20 +157,24 @@
   }
 
   .promo-product__photo {
-    top: 75px;
-    right: 0;
+    top: 53px;
+    right: -2px;
     width: 525px;
     height: 636px;
     z-index: -1;
   }
 
+  .promo-product__price {
+    margin-top: -6px;
+  }
+
   .promo-product__subtitle {
-    top: 13px;
-    left: -160px;
+    top: 15px;
+    left: -140px;
   }
 
   .promo-product__description {
-    margin: 44px 0 47px;
+    margin: 50px 0 47px;
   }
 
   .promo-product__properties {
